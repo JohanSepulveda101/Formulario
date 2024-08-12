@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido</title>
+    <link rel="stylesheet" type="text/css" href="bienvendo.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-message">
+            <h1 id="welcome-text">¡Bienvenido!</h1>
+            <p id="name-text"></p>
+            <a href="formulario.html" class="return-link">Volver al Formulario</a>
+        </div>
+    </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const nombre = urlParams.get('nombre');
+        const apellido = urlParams.get('apellido');
+
+        const nameText = document.getElementById('name-text');
+        if (nombre && apellido) {
+            nameText.textContent = `${nombre} ${apellido}`;
+        } else if (nombre) {
+            nameText.textContent = nombre;
+        }
+    </script>
+</body>
+</html>

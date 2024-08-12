@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" type="text/css" href="Estil_form.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="Form.js"></script>
+</head>
+<body>
+    <div class="container">
+        <section class="Formulario">
+            <h2>Formulario</h2>
+            <form id="Formularioform">
+                <table>
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <label>Tipo de Documento:</label>
+                                <div class="radio-group">
+                                    <label>
+                                        <input type="radio" name="Tipo de Documento" value="Tarjeta de Identidad">
+                                        Tarjeta de Identidad
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="Tipo de Documento" value="Cedula de Ciudania">
+                                        Cédula de Ciudadanía
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="Tipo de Documento" value="Cedula de Extranjeria">
+                                        Cédula de Extranjería
+                                    </label>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="Identificacion">Identificación:</label>
+                                    <input type="text" id="Identificacion" name="Identificacion">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="Nombre">Nombre:</label>
+                                    <input type="text" id="Nombre" name="Nombre">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="Apellido">Apellidos:</label>
+                                    <input type="text" id="Apellido" name="Apellido" >
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <label>Nacionalidad:</label>
+                                <div class="radio-group">
+                                    <label>
+                                        <input type="radio" name="Nacionalidad" value="Colombia">
+                                        Colombia
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="Nacionalidad" value="Mexico">
+                                        México
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="Nacionalidad" value="Otros">
+                                        Otros
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Países Favoritos:</label>
+                                <div class="radio-group">
+                                    <label>
+                                        <input type="radio" name="Paises_Favoritos" value="Canada">
+                                        Canadá
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="Paises_Favoritos" value="Peru">
+                                        Perú
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="Paises_Favoritos" value="Estados Unidos">
+                                        Estados Unidos
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="Paises_Favoritos" value="Argentina">
+                                        Argentina
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="Paises_Favoritos" value="Chile">
+                                        Chile
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="Paises_Favoritos" value="Republica Dominicana">
+                                        República Dominicana
+                                    </label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
