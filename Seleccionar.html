@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleccionar Color</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <h2>¿Cual es tu color favorito?</h2>
+    <label for="colorSelect" style="font-weight: normal;">Selecciona un color</label>
+    <select id="colorSelect">
+        <option value="rojo">Rojo</option>
+        <option value="amarillo">Amarillo</option>
+        <option value="azul">Azul</option>
+        <option value="verde">Verde</option>
+    </select>
+    <button id="enviarBtn">Enviar</button>
+
+    <script>
+        document.getElementById('enviarBtn').addEventListener('click', function() {
+            const colorSelect = document.getElementById('colorSelect');
+            const color = colorSelect.value;
+
+            Swal.fire({
+                title: 'Color Seleccionado',
+                text: `Has seleccionado el color ${color}`,
+                icon: 'info',
+                confirmButtonText: 'Aceptar'
+            });
+        });
+    </script>
+</body>
+</html>
