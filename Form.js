@@ -4,11 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const nombre = document.getElementById('Nombre').value.trim();
         const apellido = document.getElementById('Apellido').value.trim();
-
         const tipoDocumento = document.querySelector('input[name="Tipo de Documento"]:checked');
         const nacionalidad = document.querySelector('input[name="Nacionalidad"]:checked');
         const paisesFavoritos = document.querySelector('input[name="Paises_Favoritos"]:checked');
-    
+        const departamento = document.getElementById('departamento').value;
+        const capital = document.getElementById('capital').value;
+
         if (!nombre || !apellido) {
             Swal.fire({
                 icon: 'error',
@@ -48,8 +49,27 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             return;
         }
-        
 
-        window.location.href = `bienvenida.html?nombre=${encodeURIComponent(nombre)}&apellido=${encodeURIComponent(apellido)}`;
+        if (!departamento) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Formulario incompleto',
+                text: 'Selecciona un departamento favorito de Colombia.',
+                confirmButtonText: 'OK'
+            });
+            return;
+        }
+
+        if (!capital) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Formulario incompleto',
+                text: 'No se ha seleccionado una capital válida.',
+                confirmButtonText: 'OK'
+            });
+            return;
+        }
+
+        window.location.href = `bienvenida.html?nombre=${encodeURIComponent(nombre)}&apellido=${encodeURIComponent(apellido)}&departamento=${encodeURIComponent(departamento)}&capital=${encodeURIComponent(capital)}`;
     });
 });
